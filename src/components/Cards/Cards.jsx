@@ -4,10 +4,15 @@ import { Grid } from '@material-ui/core';
 import CardComponent from './Card/Card';
 import styles from './Cards.module.css';
 
-const active = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
+const Info = ({
+  data: { confirmed, recovered, deaths, lastUpdate },
+  country,
+}) => {
   if (!confirmed) {
-    return 'Loading...';
+    return "Loading...";
   }
+  const active = confirmed["value"] - recovered["value"] - deaths["value"];
+  let carddetails = [
 
   return (
     <div className={styles.container}>
