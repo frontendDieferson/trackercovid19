@@ -63,6 +63,13 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
                         backgroundColor: "rgba(237, 199, 152, 0.5)",
                         fill: "true",
                      },
+{
+                        data: dailyData.map (({active}) => active),
+                        label: "Ativos",
+                        borderColor: "rgba(237, 199, 152, 0.5)",
+                        backgroundColor: "rgba(242, 234, 0, 0.5)",
+                        fill: "true",
+                     },
           ],
         }}
       />
