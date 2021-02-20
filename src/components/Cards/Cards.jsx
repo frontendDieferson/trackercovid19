@@ -33,6 +33,13 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
           lastUpdate={lastUpdate}
           cardSubtitle="Número de mortes causadas por COVID-19."
         />
+        <CardComponent
+          className={styles.active}
+          cardTitle="Ativos"
+          value={actives.value}
+          lastUpdate={lastUpdate}
+          cardSubtitle="Número de casos ativos de COVID-19."
+        />
       </Grid>
     </div>
   );
